@@ -22,6 +22,8 @@ try:
 
 except ValueError:
     print("ERROR: Ingresa un valor numérico")
+    input("Presiona 'Enter' para terminar...")
+    print('\n')
     exit()
 cls()
 
@@ -34,10 +36,14 @@ for i in range(n):
         notas.append(int(input("Ingresa la nota de la evaluación {} (entre 10 y 70): ".format(i+1))))
         if notas[i] < 10 or notas[i] > 70:
             print("ERROR: Ingresa un valor entre 10 y 70")
+            input("Presiona 'Enter' para terminar...")
+            print('\n')
             exit()
 
     except ValueError:
         print("ERROR: Ingresa un número entero (ej: si te sacaste un 3.4, ingresa 34)")
+        input("Presiona 'Enter' para terminar...")
+        print('\n')
         exit()
 
 print('\n')
@@ -47,14 +53,20 @@ for i in range(n):
         porcentajes.append(int(input("Ingresa el porcentaje de la evaluación {} (sin el símbolo %): ".format(i+1))))
         if sum(porcentajes) > 100:
             print("ERROR: El porcentaje se sobrepasa de 100")
+            input("Presiona 'Enter' para terminar...")
+            print('\n')
             exit()
 
     except ValueError:
         print("ERROR: Ingresa un número entero (ej: si te sacaste un 3.4, ingresa 34)")
+        input("Presiona 'Enter' para terminar...")
+        print('\n')
         exit()
 
 if sum(porcentajes) != 100:
     print("ERROR: El porcentaje debe sumar 100, tus porcentajes suman {}".format(sum(porcentajes)))
+    input("Presiona 'Enter' para terminar...")
+    print('\n')
     exit()
 
 print('\n')
@@ -72,4 +84,7 @@ else:
     print('Considerando que debido al redondeo 3,95 = 4,0 y el repete vale un {}%'.format(str(int(repete*100))))
     print('Necesitarías un {} para aprobar el ramo. Suerte, tú te la puedes!'.format(str(round(ecuacion_para_obtener_40, 1)/10).replace('.', ',')))
     print('\n')
+
+input("Presiona 'Enter' para terminar...")
+print('\n')
 
